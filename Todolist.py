@@ -90,7 +90,7 @@ def get_task_of_date(deadline=date.today()):
 def add_task():
     """Requests task description and deadline and add to list"""
     task = input('Enter task >>')
-    deadline = input('Enter deadline >>')
+    deadline = input('Enter deadline in YYY-MM-DD >>')
     deadline = date.fromisoformat(deadline)
     record = TodoList(task=task, deadline=deadline)
     session.add(record)
